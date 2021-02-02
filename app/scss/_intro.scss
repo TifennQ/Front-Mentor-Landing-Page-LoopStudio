@@ -1,0 +1,32 @@
+.intro {
+
+    &__image {
+
+        margin-top: 7.5rem;
+
+        img {
+            width: 100%;
+
+            @include breakpoint-up(large) {
+                width: 65%;
+            }
+        }
+
+    }
+
+    &__text {
+        
+        @include breakpoint-up(large) {
+            position: absolute;
+            background-color: $white;
+            width: 45%;
+            height: 20rem;
+            top: 15rem;
+            right: 5.188rem;
+            padding-left: 5.625rem;
+            padding-right: 5.625rem;
+            text-align: left;
+        }
+
+    }
+}

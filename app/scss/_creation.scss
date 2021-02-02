@@ -1,0 +1,259 @@
+.creation {
+
+    margin-top: 7.5rem;
+    width: 100%;
+
+    &__main-title {
+
+        @include breakpoint-up(small) {
+            margin-bottom: 3rem;
+        }
+        
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+    }
+
+    &__ligne-1 {
+
+        @include breakpoint-up(large) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4.375rem;
+        }
+    }
+
+    &__ligne-2 {
+
+        @include breakpoint-up(large) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    
+    &__item {
+        height: 9.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        overflow: auto;
+        position: relative;
+        transition: background-color 300ms ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            filter: brightness(70%);
+        }
+
+        h3 {
+            transition: color 300ms ease-in-out;
+        }
+
+        &:hover h3 {
+            @include breakpoint-up(large) {
+                color: $black;
+            }
+        }
+
+        &:hover {
+            @include breakpoint-up(large) {
+                background-color:rgba(255,255,255, 0.7);
+            }
+        }
+
+        @include breakpoint-up(small) {
+            margin-bottom: 3.125rem;
+        }
+
+        @include breakpoint-up(large) {
+            width: 16rem;
+            height: 28.125rem;
+        }
+
+        &__1:first-child::before {
+            background-image: url(/images/mobile/image-deep-earth.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-deep-earth.jpg);
+            }
+        }
+    
+        &__1:nth-child(2)::before{
+            background-image: url(/images/mobile/image-night-arcade.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-night-arcade.jpg);
+            }
+        }
+    
+        &__1:nth-child(3)::before{
+            background-image: url(/images/mobile/image-soccer-team.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-soccer-team.jpg);
+            }
+        }
+    
+        &__1:last-child::before{
+            background-image: url(/images/mobile/image-grid.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-grid.jpg);
+            }
+        }
+
+        &__2:first-child::before {
+            background-image: url(/images/mobile/image-from-above.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-from-above.jpg);
+            }
+        }
+    
+        &__2:nth-child(2)::before{
+            background-image: url(/images/mobile/image-pocket-borealis.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-pocket-borealis.jpg);
+            }
+        }
+    
+        &__2:nth-child(3)::before{
+            background-image: url(/images/mobile/image-curiosity.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-curiosity.jpg);
+            }
+        }
+    
+        &__2:last-child::before{
+            background-image: url(/images/mobile/image-fisheye.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+    
+            @include breakpoint-up(large) {
+                background-image: url(/images/desktop/image-fisheye.jpg);
+            }
+        }
+
+    
+    }
+
+    &__titles {
+        margin-bottom: 2rem;
+        margin-left: 1rem;
+
+        @include breakpoint-up(small) {
+            margin-bottom: 1rem;
+            margin-left: 10rem;
+        }
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+        }
+
+
+        > h3 {
+            margin: 0;
+
+            @include breakpoint-up(small) {
+                margin-left: 1rem;
+            }
+
+            @include breakpoint-up(medium) {
+                font-weight: 100;
+                font-size: $medium;
+                line-height: 1;
+                margin-bottom: 0rem;
+                margin-left: 1.25rem;
+            }
+        }
+    }
+
+    &__button-see {
+
+        &-div {
+            align-self: center;
+
+            a {
+                transition: color 300ms ease-in-out;
+                transition: background-color 300ms ease-in-out;
+                transition: border-color 300ms ease-in-out;
+            }
+
+            &:hover a{
+                color: $white;
+                background-color: $black;
+                border-color: $black;
+            }
+        }
+
+        &__hide-for-mobile {
+            @include breakpoint-up(medium) {
+                display: block;
+                width: 8.75rem;
+                border: 0.150rem solid $darkGray;
+                border-radius: 3px;
+                text-align: center;
+                font-family: 'Alata', sans-serif;
+                color: $black;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                padding: 0.4500rem 0 0.5rem 0;
+            }
+
+        }
+
+        &__hide-for-desktop {
+            @include breakpoint-down(medium) {
+                cursor: pointer;
+                position: relative;
+                display: block;
+                width: 40%;
+                border: 0.100rem solid $black;
+                font-family: 'Alata', sans-serif;
+                text-align: center;
+                color: $black;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                margin: 1.5625rem auto;
+                padding: 0.4500rem 0 0.5rem 0;
+            }
+        }
+ 
+    }
+
+}
